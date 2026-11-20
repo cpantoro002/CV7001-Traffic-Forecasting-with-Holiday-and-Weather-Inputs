@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+data/raw/metro_traffic.zip
