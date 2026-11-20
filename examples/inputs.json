@@ -1,0 +1,20 @@
+[
+  {
+    "date_time": "2018-01-01 00:00:00",
+    "volume_lag_1h": 1580.0,
+    "volume_lag_24h": 1000.0,
+    "volume_lag_168h": 1092.0
+  },
+  {
+    "date_time": "2018-01-01 01:00:00",
+    "volume_lag_1h": 1478.0,
+    "volume_lag_24h": 711.0,
+    "volume_lag_168h": 666.0
+  },
+  {
+    "date_time": "2018-01-01 02:00:00",
+    "volume_lag_1h": 1408.0,
+    "volume_lag_24h": 519.0,
+    "volume_lag_168h": 487.0
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "feature_comparison.png": "Measured validation/test MAE in feature_metrics.json; no illustrative scores.",
+  "context_errors.png": "Measured MAE in subgroup_metrics.csv; groups overlap, and precipitation refers to the previous hour.",
+  "holiday_example.png": "Observed source counts and actual saved predictions for the predeclared date 1 January 2018 from test_predictions_features.csv.",
+  "renderer": "Matplotlib; all graphs are generated from the executed experiment, with no generated imagery."
+}

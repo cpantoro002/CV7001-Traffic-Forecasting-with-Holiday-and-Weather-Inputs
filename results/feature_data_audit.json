@@ -1,0 +1,109 @@
+{
+  "raw_rows": 48204,
+  "unique_hours": 40575,
+  "repeated_timestamp_rows_removed": 7629,
+  "conflicting_timestamp_targets": 0,
+  "start": "2012-10-02 09:00:00",
+  "end": "2018-09-30 23:00:00",
+  "hours_on_complete_grid": 52551,
+  "unobserved_hours": 11976,
+  "rows_without_all_three_lags_removed": 5844,
+  "eligible_rows": 34731,
+  "raw_sha256": "0b3679ac15173f79c6dc6c5ef8a0798d806fa5c5d7f05c84a5fa711bd1b05f07",
+  "split_counts": {
+    "train": 19643,
+    "validation": 8603,
+    "test": 6485
+  },
+  "split_date_ranges": {
+    "test": {
+      "first": "2018-01-01 00:00:00",
+      "last": "2018-09-30 23:00:00"
+    },
+    "train": {
+      "first": "2012-10-09 09:00:00",
+      "last": "2016-12-31 23:00:00"
+    },
+    "validation": {
+      "first": "2017-01-01 00:00:00",
+      "last": "2017-12-31 23:00:00"
+    }
+  },
+  "study_versions": {
+    "A": [
+      "hour",
+      "day_of_week",
+      "month",
+      "volume_lag_1h",
+      "volume_lag_24h",
+      "volume_lag_168h"
+    ],
+    "B": [
+      "hour",
+      "day_of_week",
+      "month",
+      "volume_lag_1h",
+      "volume_lag_24h",
+      "volume_lag_168h",
+      "is_holiday"
+    ],
+    "C": [
+      "hour",
+      "day_of_week",
+      "month",
+      "volume_lag_1h",
+      "volume_lag_24h",
+      "volume_lag_168h",
+      "is_holiday",
+      "temperature_c_lag_1h",
+      "rain_mm_lag_1h",
+      "snow_mm_lag_1h",
+      "cloud_percent_lag_1h",
+      "weather_clear_lag_1h",
+      "weather_clouds_lag_1h",
+      "weather_drizzle_lag_1h",
+      "weather_fog_lag_1h",
+      "weather_haze_lag_1h",
+      "weather_mist_lag_1h",
+      "weather_rain_lag_1h",
+      "weather_smoke_lag_1h",
+      "weather_snow_lag_1h",
+      "weather_squall_lag_1h",
+      "weather_thunderstorm_lag_1h",
+      "weather_other_lag_1h"
+    ]
+  },
+  "holiday_definition": "Whole-day indicator: US federal calendar observed dates, actual fixed-date federal holidays, plus dates labelled in the source; regional dates outside the source need an override.",
+  "source_holiday_label_dates": 53,
+  "source_holiday_label_hours": [
+    0
+  ],
+  "calendar_dates_in_record_range": 70,
+  "holiday_target_hours_by_split": {
+    "test": 166,
+    "train": 671,
+    "validation": 301
+  },
+  "invalid_raw_weather_rows": {
+    "temp": 10,
+    "rain_1h": 1,
+    "snow_1h": 0,
+    "clouds_all": 0
+  },
+  "weather_rules": {
+    "temperature": "Kelvin <=0 -> missing, then subtract 273.15 for Celsius",
+    "precipitation": "Negative or >1000 mm/hour -> missing (broad sanity screen)",
+    "clouds": "Outside [0,100] percent -> missing",
+    "duplicate_hours": "Median numeric measurements and union of categorical weather labels",
+    "timing": "Exact t-1 timestamp only; no target-hour weather"
+  },
+  "weather_missing_feature_values_by_split": {
+    "test": 0,
+    "train": 10,
+    "validation": 0
+  },
+  "imputation": "Training-fold medians plus missing indicators; no weather-based target rows dropped",
+  "same_target_hours_all_versions": true,
+  "evaluation_disclosure": "2018 was evaluated in the earlier baseline. This fixed follow-up comparison keeps it out of fitting and model selection, but does not claim a new blind test.",
+  "original_A_mae_reproduced": true
+}

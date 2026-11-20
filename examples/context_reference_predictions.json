@@ -1,0 +1,62 @@
+{
+  "A": [
+    {
+      "variant": "A",
+      "date_time": "2018-01-01 08:00:00",
+      "is_holiday": 1,
+      "predicted_vehicles_per_hour": 1030.613486772487
+    },
+    {
+      "variant": "A",
+      "date_time": "2018-08-24 03:00:00",
+      "is_holiday": 0,
+      "predicted_vehicles_per_hour": 404.17570352018697
+    },
+    {
+      "variant": "A",
+      "date_time": "2018-01-02 08:00:00",
+      "is_holiday": 0,
+      "predicted_vehicles_per_hour": 5910.477603174605
+    }
+  ],
+  "B": [
+    {
+      "variant": "B",
+      "date_time": "2018-01-01 08:00:00",
+      "is_holiday": 1,
+      "predicted_vehicles_per_hour": 1036.9932222222226
+    },
+    {
+      "variant": "B",
+      "date_time": "2018-08-24 03:00:00",
+      "is_holiday": 0,
+      "predicted_vehicles_per_hour": 404.4127295938016
+    },
+    {
+      "variant": "B",
+      "date_time": "2018-01-02 08:00:00",
+      "is_holiday": 0,
+      "predicted_vehicles_per_hour": 5924.850158730162
+    }
+  ],
+  "C": [
+    {
+      "variant": "C",
+      "date_time": "2018-01-01 08:00:00",
+      "is_holiday": 1,
+      "predicted_vehicles_per_hour": 1035.5172275132272
+    },
+    {
+      "variant": "C",
+      "date_time": "2018-08-24 03:00:00",
+      "is_holiday": 0,
+      "predicted_vehicles_per_hour": 404.4179376731803
+    },
+    {
+      "variant": "C",
+      "date_time": "2018-01-02 08:00:00",
+      "is_holiday": 0,
+      "predicted_vehicles_per_hour": 5884.176380952382
+    }
+  ]
+}

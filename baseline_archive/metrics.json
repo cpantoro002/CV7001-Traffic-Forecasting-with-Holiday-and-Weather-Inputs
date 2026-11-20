@@ -1,0 +1,91 @@
+{
+  "forecast_horizon_hours": 1,
+  "random_seed": 42,
+  "selected_model_by_validation": "Random forest",
+  "strongest_baseline_by_validation": "Previous week",
+  "best_parameters": {
+    "Ridge regression": {
+      "family": "ridge",
+      "parameter": 10.0
+    },
+    "Random forest": {
+      "family": "forest",
+      "parameter": 2
+    }
+  },
+  "models": {
+    "Last hour": {
+      "validation": {
+        "mae": 597.0327792630478,
+        "rmse": 835.2420518923432,
+        "r2": 0.8221804646498257,
+        "n": 8603
+      },
+      "test": {
+        "mae": 590.6444101773324,
+        "rmse": 815.7516660876332,
+        "r2": 0.8281193972958996,
+        "n": 6485
+      }
+    },
+    "Previous day": {
+      "validation": {
+        "mae": 553.9582703708008,
+        "rmse": 1011.7474989479041,
+        "r2": 0.7390850003473932,
+        "n": 8603
+      },
+      "test": {
+        "mae": 567.9380107941403,
+        "rmse": 1031.5199314629829,
+        "r2": 0.7251687096035286,
+        "n": 6485
+      }
+    },
+    "Previous week": {
+      "validation": {
+        "mae": 301.44437986748807,
+        "rmse": 562.4333938893537,
+        "r2": 0.9193699433438219,
+        "n": 8603
+      },
+      "test": {
+        "mae": 339.20863531225905,
+        "rmse": 648.1572267541864,
+        "r2": 0.8914895250866091,
+        "n": 6485
+      }
+    },
+    "Ridge regression": {
+      "validation": {
+        "mae": 264.75563084692453,
+        "rmse": 387.58466387949437,
+        "r2": 0.9617097733919521,
+        "n": 8603
+      },
+      "test": {
+        "mae": 260.8465795710314,
+        "rmse": 383.24971304918404,
+        "r2": 0.9620619848461589,
+        "n": 6485
+      }
+    },
+    "Random forest": {
+      "validation": {
+        "mae": 162.59174730164978,
+        "rmse": 257.6659348584039,
+        "r2": 0.983077334139801,
+        "n": 8603
+      },
+      "test": {
+        "mae": 151.38730792194318,
+        "rmse": 241.1476461106649,
+        "r2": 0.9849797561618912,
+        "n": 6485
+      }
+    }
+  },
+  "selected_model_test_mae_reduction_vs_baseline_percent": 55.37044397982871,
+  "test_mean_traffic_volume": 3338.9358519660755,
+  "test_median_traffic_volume": 3535.0
+}

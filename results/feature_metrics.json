@@ -1,0 +1,127 @@
+{
+  "question": "Do whole-day holidays and previous-hour weather improve one-hour-ahead volume forecasts?",
+  "forecast_horizon_hours": 1,
+  "settings": {
+    "n_estimators": 150,
+    "max_depth": 18,
+    "min_samples_leaf": 2,
+    "max_features": 1.0,
+    "random_state": 42,
+    "n_jobs": 2
+  },
+  "fixed_before_comparison": true,
+  "training_dates": "before 2017",
+  "validation_dates": "2017",
+  "test_dates": "January-September 2018",
+  "versions": {
+    "A": {
+      "description": "Calendar + past traffic",
+      "input_columns": [
+        "hour",
+        "day_of_week",
+        "month",
+        "volume_lag_1h",
+        "volume_lag_24h",
+        "volume_lag_168h"
+      ],
+      "validation": {
+        "mae": 162.59174730164978,
+        "rmse": 257.6659348584039,
+        "r2": 0.983077334139801,
+        "n": 8603
+      },
+      "test": {
+        "mae": 151.38730792194318,
+        "rmse": 241.1476461106649,
+        "r2": 0.9849797561618912,
+        "n": 6485
+      }
+    },
+    "B": {
+      "description": "A + whole-day holiday",
+      "input_columns": [
+        "hour",
+        "day_of_week",
+        "month",
+        "volume_lag_1h",
+        "volume_lag_24h",
+        "volume_lag_168h",
+        "is_holiday"
+      ],
+      "validation": {
+        "mae": 162.32394037247886,
+        "rmse": 257.47151724631135,
+        "r2": 0.983102861946234,
+        "n": 8603
+      },
+      "test": {
+        "mae": 150.85331058183627,
+        "rmse": 240.53909575497667,
+        "r2": 0.9850554694561059,
+        "n": 6485
+      }
+    },
+    "C": {
+      "description": "B + previous-hour weather",
+      "input_columns": [
+        "hour",
+        "day_of_week",
+        "month",
+        "volume_lag_1h",
+        "volume_lag_24h",
+        "volume_lag_168h",
+        "is_holiday",
+        "temperature_c_lag_1h",
+        "rain_mm_lag_1h",
+        "snow_mm_lag_1h",
+        "cloud_percent_lag_1h",
+        "weather_clear_lag_1h",
+        "weather_clouds_lag_1h",
+        "weather_drizzle_lag_1h",
+        "weather_fog_lag_1h",
+        "weather_haze_lag_1h",
+        "weather_mist_lag_1h",
+        "weather_rain_lag_1h",
+        "weather_smoke_lag_1h",
+        "weather_snow_lag_1h",
+        "weather_squall_lag_1h",
+        "weather_thunderstorm_lag_1h",
+        "weather_other_lag_1h"
+      ],
+      "validation": {
+        "mae": 161.63202636260212,
+        "rmse": 257.68970660061507,
+        "r2": 0.9830742114933604,
+        "n": 8603
+      },
+      "test": {
+        "mae": 151.36277603625555,
+        "rmse": 240.8228660185241,
+        "r2": 0.9850201877497624,
+        "n": 6485
+      }
+    }
+  },
+  "evaluation_disclosure": "2018 was evaluated in the earlier baseline. This fixed follow-up comparison keeps it out of fitting and model selection, but does not claim a new blind test.",
+  "selected_by_validation": "C",
+  "previous_week_persistence": {
+    "validation": {
+      "mae": 301.44437986748807,
+      "rmse": 562.4333938893537,
+      "r2": 0.9193699433438219,
+      "n": 8603
+    },
+    "test": {
+      "mae": 339.20863531225905,
+      "rmse": 648.1572267541864,
+      "r2": 0.8914895250866091,
+      "n": 6485
+    }
+  },
+  "test_mae_reduction_vs_A_percent": {
+    "A": 0.0,
+    "B": 0.3527358716110096,
+    "C": 0.01620471757135533
+  },
+  "runtime_seconds": 132.37039419997018
+}

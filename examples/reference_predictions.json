@@ -1,0 +1,14 @@
+[
+  {
+    "date_time": "2018-01-01 00:00:00",
+    "predicted_vehicles_per_hour": 1010.4156701381404
+  },
+  {
+    "date_time": "2018-01-01 01:00:00",
+    "predicted_vehicles_per_hour": 1137.0635396825396
+  },
+  {
+    "date_time": "2018-01-01 02:00:00",
+    "predicted_vehicles_per_hour": 860.5522715665975
+  }
+]

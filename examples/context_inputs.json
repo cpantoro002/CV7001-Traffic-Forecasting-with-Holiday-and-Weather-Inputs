@@ -1,0 +1,51 @@
+[
+  {
+    "date_time": "2018-01-01 08:00:00",
+    "volume_lag_1h": 677.0,
+    "volume_lag_24h": 1319.0,
+    "volume_lag_168h": 1260.0,
+    "previous_hour_weather": {
+      "date_time": "2018-01-01 07:00:00",
+      "temperature_c": -25.389999999999986,
+      "rain_mm": 0.0,
+      "snow_mm": 0.0,
+      "cloud_cover_percent": 1.0,
+      "conditions": [
+        "Clear"
+      ]
+    }
+  },
+  {
+    "date_time": "2018-08-24 03:00:00",
+    "volume_lag_1h": 387.0,
+    "volume_lag_24h": 381.0,
+    "volume_lag_168h": 408.0,
+    "previous_hour_weather": {
+      "date_time": "2018-08-24 02:00:00",
+      "temperature_c": 20.510000000000048,
+      "rain_mm": 1.02,
+      "snow_mm": 0.0,
+      "cloud_cover_percent": 90.0,
+      "conditions": [
+        "Rain",
+        "Thunderstorm"
+      ]
+    }
+  },
+  {
+    "date_time": "2018-01-02 08:00:00",
+    "volume_lag_1h": 5696.0,
+    "volume_lag_24h": 811.0,
+    "volume_lag_168h": 2982.0,
+    "previous_hour_weather": {
+      "date_time": "2018-01-02 07:00:00",
+      "temperature_c": -23.21999999999997,
+      "rain_mm": 0.0,
+      "snow_mm": 0.0,
+      "cloud_cover_percent": 5.0,
+      "conditions": [
+        "Clear"
+      ]
+    }
+  }
+]
