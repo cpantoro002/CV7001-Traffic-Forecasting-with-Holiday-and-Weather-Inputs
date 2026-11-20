@@ -48,9 +48,10 @@ tests or proof of causal weather/holiday effects.
 
 ## Run the updated study
 
-Use **Python 3.12** and open a terminal in the extracted `traffic_project` folder.
-The reference environment used Python 3.12.14. On Windows, use `py -3.12` instead
-of `python` if appropriate. On macOS/Linux the executable may be `python3`.
+Use **Python 3.11** and open a terminal in the extracted project folder
+containing `feature_study.py`. The reference environment used Python 3.11.9.
+On Windows, use `py -3.11` instead of `python` if appropriate.
+On macOS/Linux, the executable may be `python3`.
 
 ```bash
 python -m pip install -r requirements.txt
@@ -75,7 +76,7 @@ Optional isolated environment, without shell activation:
 
 ```powershell
 # Windows PowerShell
-py -3.12 -m venv .venv
+py -3.11 -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
 .venv\Scripts\python feature_study.py train
 .venv\Scripts\python verify.py
